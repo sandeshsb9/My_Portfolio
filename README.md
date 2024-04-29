@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-![Portfolio Preview](https://github.com/sandeshsb9/personal-portfolio/raw/master/img/portfolio%20image.png)
+![Portfolio Preview](https://github.com/sandeshsb9/My_Portfolio/blob/master/img/portfolio%20image.png)
 
 
 
