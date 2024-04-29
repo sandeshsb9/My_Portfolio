@@ -91,10 +91,11 @@ button:hover {
 }
 
 .header-right-side img {
-  width: 670px;
-  height: 855px;
+  max-width: 100%;
+  height: auto;
   margin-top: 15%;
 }
+
 
 /* Footer */
 footer {
