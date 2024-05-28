@@ -134,6 +134,24 @@ h1,
   background-color: #0056b3;
 }
 
+/* Add this CSS for responsiveness */
+@media (max-width: 480px) {
+  .portfolios {
+    grid-template-columns: repeat(1, 1fr); /* Change to a single column layout */
+    grid-gap: 1rem; /* Reduce the gap between items */
+  }
+
+  .portfolios .portfolio-item img {
+    height: auto; /* Let the height adjust automatically */
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+  }
+
+  .portfolios .portfolio-item .hover-items {
+    padding: 1rem; /* Add padding for better spacing */
+  }
+}
+
+
     </style>
 	 
 </head>
