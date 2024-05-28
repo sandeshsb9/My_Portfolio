@@ -2,10 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
 
-/* Custom CSS */
-* {
+/* Reset default margins and paddings */
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+/* Custom CSS */
+* {
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -21,20 +26,25 @@
 
 header {
   width: 100%;
-  height: 160vh;
+  min-height: 100vh;
   background-color: black;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* Ensure no extra white space is shown */
 }
 
 .header-left-side {
-  padding: 0 0 0 90px;
+  padding: 20px;
   color: white;
 }
 
 .header-left-side h1 {
   color: #bea060;
   line-height: 1.2em;
-  font-size: 78px;
+  font-size: 48px;
   padding-top: 20px;
   margin-bottom: 20px;
   font-weight: 400 !important;
@@ -43,67 +53,136 @@ header {
 .header-left-side h2 {
   color: #bea060;
   font-family: "Inter", sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.2em;
   font-weight: 500;
-  letter-spacing: 2px;
-  padding: 10px;
+  letter-spacing: 1px;
+  padding: 10px 0;
 }
 
 .header-left-side p {
   margin-top: 5%;
   margin-bottom: 10%;
   font-family: "Inter", sans-serif;
-  letter-spacing: 2px;
-  font-size: 16px;
+  letter-spacing: 1px;
+  font-size: 14px;
   color: #c1bfbf;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 button {
-  padding: 20px 10px;
-  border: 2px solid #bea060;
-  background: transparent;
-  width: 47%;
-  color: white;
-  margin-right: 15px;
+  padding: 15px 10px;
+  width: 70%;
+  color: #0044cc; /* Blue text color */
+  margin-bottom: 10px;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
+  background: transparent; /* Transparent background */
+  border: 2px solid #bea060; /* Gold border */
+}
+
+button a {
+  color: #0044cc; /* Blue text color */
+  text-decoration: none;
 }
 
 button:hover {
   background-color: #bea060;
+  color: black;
   transition: 0.7s;
-}
-
-.btn {
-  width: 97%;
-  background-color: #bea060;
 }
 
 .header-left-side h3 {
   color: #c1bfbf;
-  padding-top: 80px;
+  padding-top: 40px;
   font-family: "Inter", sans-serif;
   font-weight: 300;
 }
 
-.header-right-side img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 15%;
+.header-right-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
+.header-right-side img {
+  max-width: 80%;
+  height: auto;
+}
 
 /* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background-color: black;
-  color: white;
-  padding: 20px 0;
+  color: #bea060;
+  padding: 10px 0;
   text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 321px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .header-left-side, .header-right-side {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .header-left-side h1 {
+    font-size: 78px;
+  }
+
+  .header-left-side h2 {
+    font-size: 26px;
+  }
+
+  .header-left-side p {
+    font-size: 16px;
+  }
+
+  button {
+    width: 47%;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .header-right-side img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+/* Additional Responsive Rules for Small Screens */
+@media (max-width: 400px) {
+  .header-left-side h1 {
+    font-size: 36px;
+  }
+
+  .header-left-side h2 {
+    font-size: 16px;
+  }
+
+  .header-left-side p {
+    font-size: 12px;
+  }
+
+  .header-right-side img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
 }
